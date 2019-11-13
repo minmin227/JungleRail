@@ -1,11 +1,4 @@
-<section class="cart-show">
-
-  <header class="page-header">
-    <h1>My Cart</h1>
-  </header>
-<<<<<<< HEAD
-
-  <div class="panel panel-default items">
+<div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -19,6 +12,7 @@
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
         <% end %>
+    
       </tbody>
       <tfoot>
         <tr>
@@ -26,7 +20,7 @@
             TOTAL:
           </th>
           <th>
-            <%= humanized_money_with_symbol (cart_subtotal_cents / 100.0) %>
+            <%= cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
@@ -49,13 +43,3 @@
       <% end %>
     </div>
   </div>
-
-=======
-<% if enhanced_cart.length == 0 %>
-  <%=render 'emptycartmessage' %>
-<% else %>
-  <%=render 'addeditem'%>
-<% end %>
->>>>>>> fix/empty-cart-ui
-</section>
-
